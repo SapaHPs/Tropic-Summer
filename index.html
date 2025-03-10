@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tropic Summer - Uniformes escolares, uniformes para jardines infantiles y dotaciones para instituciones con calidad y estilo.">
+    <meta name="keywords" content="uniformes escolares, dotaciones, jardines infantiles, uniformes deportivos, bordado personalizado">
+    <title>Tropic Summer | Uniformes Escolares y Dotaciones</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        /* General Styles */
+        :root {
+            --primary-color: #00a8cc;
+            --secondary-color: #f8c630;
+            --dark-color: #142850;
+            --light-color: #f4f9fc;
+            --accent-color: #ff6b6b;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #0089a7;
+            border-color: #0089a7;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 168, 204, 0.3);
+        }
+        
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary-custom:hover {
+            background-color: #e0b020;
+            border-color: #e0b020;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(248, 198, 48, 0.3);
+        }
+        
+        .shake-animation:hover {
+            animation: shake 0.5s ease-in-out;
+        }
+        
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-3px); }
+            80% { transform: translateX(3px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Navigation */
+        .navbar {
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px 0;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+            transition: all 0.4s ease;
+        }
+        
+        .navbar.scrolled .navbar-brand img {
+            height: 40px;
+        }
+        
+        .navbar .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+            margin: 0 10px;
+            padding: 5px 0;
+        }
+        
+        .navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .navbar .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/eb/0d/65/eb0d656b01937c6a4f5e58c303b2a9db.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInZoom 1s forwards 0.3s;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInZoom 1s forwards 0.6s;
+        }
+        
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .hero-buttons {
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.9s;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        /* About Section */
+        .about-timeline {
+            position: relative;
+            margin-top: 30px;
+            padding-left: 30px;
+        }
+        
+        .about-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+            padding-left: 20px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .values-card {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .values-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .values-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Mission & Vision */
+        .mission-vision {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        
+        .mission-vision::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 40, 80, 0.8);
+        }
+        
+        .mission-vision .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .mission-card, .vision-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Services Section */
+        .service-card {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Products Section */
+        .product-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding-top: 75%; /* Aspect ratio 4:3 */
+        }
+        
+        .product-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.1);
+        }
+        
+        .product-details {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .product-tabs .nav-link {
+            padding: 10px 20px;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .product-tabs .nav-link.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+        }
+        
+        /* Gallery Section */
+        .gallery-item {
+            position: relative;
+            padding-top: 75%;  /* Aspect ratio 4:3 */
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        /* Testimonials & Clients */
+        .testimonial-card {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 15px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 5rem;
+            color: rgba(0, 168, 204, 0.1);
+            font-family: serif;
+            font-weight: 700;
+        }
+        
+        .client-quote {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client-name {
+            font-weight: 700;
+        }
+        
+        .client-position {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .clients-slider {
+            background-color: white;
+            padding: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .client-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            padding: 15px;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+        
+        .client-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+        
+        .client-logo img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        /* Blog Section */
+        .blog-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-img-wrapper {
+            position: relative;
+            padding-top: 60%; /* Aspect ratio 5:3 */
+            overflow: hidden;
+        }
+        
+        .blog-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .blog-card:hover .blog-img {
+            transform: scale(1.1);
+        }
+        
+        .blog-details {
+            padding: 20px;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .blog-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .blog-date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-date i {
+            margin-right: 5px;
+        }
+        
+        /* Contact Section */
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+        }
+        
+        .contact-info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .form-control {
+            border-radius: 30px;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+        }
+        
+        .form-control:focus {
+            box-shadow: none;
+            border-color: var(--primary-color);
+        }
+        
+        /* FAQ Section */
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 15px 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        /* Configurator */
+        .configurator {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .uniform-preview {
+            border: 1px dashed #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .configurator-options {
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        /* Sustainability */
+        .sustainability-card {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .sustainability-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sustainability-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .certificate-card {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certificate-logo {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            margin-right: 15px;
+        }
+        
+        .certificate-logo img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 60px;
+        }
+        
+        .footer-text {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-social {
+            margin-bottom: 30px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-newsletter .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+            color: white;
+        }
+        
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #25d366;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .navbar-collapse {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 10px;
+            }
+            
+            .contact-info {
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .section-padding {
+                padding: 50px 0;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.PNG" alt="Tropic Summer Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mission-vision">Misión y Visión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clients">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">TROPIC SUMMER</h1>
+                <p class="hero-subtitle">Mas de 15 años vistiendo instituciones educativas con calidad y estilo</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary-custom me-3 mb-3 mb-md-0 shake-animation">Ver Catálogo</a>
+                    <a href="#contact" class="btn btn-secondary-custom shake-animation">Solicitar Cotización</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nuestra Historia</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="about-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2000</div>
+                            <h4>Fundación</h4>
+                            <p>Iniciamos con un pequeño taller especializado en la confección de uniformes escolares para colegios locales.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2012</div>
+                            <h4>Expansión</h4>
+                            <p>Ampliarnos</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2016</div>
+                            <h4>Implementación de tecnología</h4>
+                            <p>Invertimos en maquinaria.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2020</div>
+                            <h4>Certificación</h4>
+                            <p>Obtuvimos certificaciones</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023</div>
+                            <h4>Línea </h4>
+                            <p>Lanzamos nuestra primera línea de ropa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="values-card">
+                                <div class="values-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <h4>Calidad</h4>
+                                <p>Utilizamos los mejores materiales y procesos para garantizar la durabilidad de nuestros productos.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="values-card">
+                                <div class="values-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h4>Compromiso</h4>
+                                <p>Cumplimos con los plazos de entrega y estándares de calidad acordados con nuestros clientes.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="values-card">
+                                <div class="values-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>Innovación</h4>
+                                <p>Constantemente buscamos nuevas tecnologías y diseños para mejorar nuestros productos.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="values-card">
+                                <div class="values-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4>Sostenibilidad</h4>
+                                <p>Comprometidos con el medio ambiente, implementamos procesos eco-amigables en nuestra producción.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <img src="https://media-bog2-2.cdn.whatsapp.net/v/t61.24694-24/411297155_743081901017400_6694425191462937898_n.jpg?ccb=11-4&oh=01_Q5AaIMWv5dxm9eO0KaWkfZDnRB1SrGHvqvrItBViTaW5zm6_&oe=67D580A6&_nc_sid=5e03e0&_nc_cat=108" alt="Equipo Tropic Summer" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="section-padding mission-vision" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80');">
+        <div class="container">
+            <h2 class="section-title text-white" data-aos="fade-up">Misión y Visión</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="mission-card">
+                        <h3 class="mb-4"><i class="fas fa-bullseye me-2"></i> Misión</h3>
+                        <p class="lead">Crear uniformes funcionales que inspiren identidad institucional.</p>
+                        <p>En Tropic Summer nos dedicamos a diseñar y confeccionar uniformes escolares y dotaciones corporativas que combinan comodidad, durabilidad y estética, permitiendo a nuestros clientes proyectar una imagen profesional y coherente con sus valores institucionales.</p>
+                        <p>Trabajamos con pasión y compromiso para superar las expectativas de nuestros clientes, ofreciendo soluciones personalizadas y de alta calidad.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="vision-card">
+                        <h3 class="mb-4"><i class="fas fa-eye me-2"></i> Visión</h3>
+                        <p class="lead">Ser líderes en innovación textil educativa para 2025.</p>
+                        <p>Aspiramos a convertirnos en la empresa líder en confección de uniformes escolares y dotaciones institucionales a nivel nacional, reconocida por su innovación, calidad superior y compromiso con la sostenibilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h4>Confección de Uniformes Escolares</h4>
+                        <p>Diseñamos y producimos uniformes escolares a medida, adaptados a las necesidades específicas de cada institución.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Dotaciones Corporativas</h4>
+                        <p>Confeccionamos uniformes para personal administrativo, docente y de servicios generales para jardines infantiles y empresas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h4>Bordado Personalizado</h4>
+                        <p>Desarrollamos y bordamos escudos, logos e insignias personalizadas con tecnología computarizada de alta precisión.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <h4>Producción en Masa</h4>
+                        <p>Capacidad para producir grandes volúmenes de prendas en tiempo récord, para temporadas escolares o pedidos urgentes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="btn btn-primary-custom">Solicitar información</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nuestros Productos</h2>
+            
+            <!-- Product Categories Tabs -->
+            <ul class="nav nav-pills mb-4 product-tabs justify-content-center" id="productTab" role="tablist" data-aos="fade-up" data-aos-delay="200">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="daily-tab" data-bs-toggle="pill" data-bs-target="#daily" type="button" role="tab" aria-controls="daily" aria-selected="true">Uniformes Diarios</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sports-tab" data-bs-toggle="pill" data-bs-target="#sports" type="button" role="tab" aria-controls="sports" aria-selected="false">Uniformes Deportivos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="accessories-tab" data-bs-toggle="pill" data-bs-target="#accessories" type="button" role="tab" aria-controls="accessories" aria-selected="false">Accesorios Escolares</button>
+                </li>
+            </ul>
+            
+            <!-- Product Content -->
+            <div class="tab-content" id="productTabContent">
+                <!-- Daily Uniforms -->
+                <div class="tab-pane fade show active" id="daily" role="tabpanel" aria-labelledby="daily-tab">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://th.bing.com/th/id/OIP.Fw4nQgOgCRGbKY3zZLe_KAHaHP?rs=1&pid=ImgDetMain" alt="Uniforme Diario 1" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title"></h4>
+                                    <p>Uniforme clásico y elegante, confeccionado con materiales de alta durabilidad y confort para uso diario.</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Tabla de Tallas</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://img1.exportersindia.com/product_images/bc-full/dir_37/1088192/girl-school-uniform-208999.jpg" alt="Uniforme Diario 2" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">Uniforme de diario 2</h4>
+                                    <p>Uniforme de diario</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Tabla de Tallas</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://tiimg.tistatic.com/fp/1/003/444/girls-school-uniform-496.jpg" alt="Uniforme Diario 3" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">Uniforme de diario 3</h4>
+                                    <p>Uniforme de diario</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Tabla de Tallas</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sports Uniforms -->
+                <div class="tab-pane fade" id="sports" role="tabpanel" aria-labelledby="sports-tab">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://th.bing.com/th/id/R.93433deda143057e161a8b2f8a792886?rik=TlbcrdkwTXPMCA&pid=ImgRaw&r=0" alt="Uniforme Deportivo 1" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">Sudadera 1</h4>
+                                    <p>Uniforme deportivo cómodo y duradero</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Tabla de Tallas</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://th.bing.com/th/id/R.53bb4476ae91f2deb7422078f22e2583?rik=b24Ji6DurbCCfw&pid=ImgRaw&r=0" alt="Uniforme Deportivo 2" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">Sudadera 2</h4>
+                                    <p>Uniforme deportivo</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Tabla de Tallas</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://static.wixstatic.com/media/f82b0e_858cd7f9a6794e8c80deeff59f033aa7~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg" alt="Uniforme Deportivo 3" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">Sudadera 3</h4>
+                                    <p>Sudadera</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Tabla de Tallas</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accessories -->
+                <div class="tab-pane fade" id="accessories" role="tabpanel" aria-labelledby="accessories-tab">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://th.bing.com/th/id/OIP.gcwCCbC66G5mjayWFfo-8AHaHa?rs=1&pid=ImgDetMain" alt="Accesorios 1" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">zapatos</h4>
+                                    <p>zapatos deportivos</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Detalles</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://th.bing.com/th/id/R.ddcb390ab91588e8d57be65943167889?rik=Qfy4x6XlcP23ag&pid=ImgRaw&r=0" alt="Accesorios 2" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">Corbatas y Accesorios</h4>
+                                    <p>Corbatas, corbatines, cinturones y otros accesorios que complementan los uniformes escolares.</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Detalles</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://f.fcdn.app/imgs/b25822/sisi.com.uy/sisiuy/3cb4/original/catalogo/21520_016/1500-1500/medias-escolares-pack-x3-azul.jpg" alt="Accesorios 3" class="product-img">
+                                </div>
+                                <div class="product-details">
+                                    <h4 class="product-title">medias</h4>
+                                    <p>medias</p>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#product360Modal">Ver 360°</button>
+                                    <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#sizesModal">Detalles</button>
+                                    <button class="btn btn-sm btn-primary-custom float-end" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Galería de Proyectos</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https://th.bing.com/th/id/R.81a17a7fa5d4fd1a73b1f91271592cff?rik=kdj9fxmlsUon1w&pid=ImgRaw&r=0" alt="Before & After 1" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Colegio San Agustín</h4>
+                            <p>Renovación de uniformes</p>
+                            <button class="btn btn-light btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#galleryModal1">Ver Detalle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://th.bing.com/th/id/R.81a17a7fa5d4fd1a73b1f91271592cff?rik=kdj9fxmlsUon1w&pid=ImgRaw&r=0" alt="Before & After 2" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Jardín Infantil Semillitas</h4>
+                            <p>Diseño completo de uniformes</p>
+                            <button class="btn btn-light btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#galleryModal2">Ver Detalle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <img src="https://th.bing.com/th/id/R.81a17a7fa5d4fd1a73b1f91271592cff?rik=kdj9fxmlsUon1w&pid=ImgRaw&r=0" alt="Video Proceso" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Proceso de Confección</h4>
+                            <p>Video del proceso productivo</p>
+                            <button class="btn btn-light btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#videoModal">Ver Video</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-item">
+                        <img src="https://th.bing.com/th/id/R.81a17a7fa5d4fd1a73b1f91271592cff?rik=kdj9fxmlsUon1w&pid=ImgRaw&r=0" alt="Before & After 3" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Colegio Montessori</h4>
+                            <p>Rediseño de uniformes deportivos</p>
+                            <button class="btn btn-light btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#galleryModal3">Ver Detalle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-item">
+                        <img src="https://th.bing.com/th/id/R.81a17a7fa5d4fd1a73b1f91271592cff?rik=kdj9fxmlsUon1w&pid=ImgRaw&r=0" alt="Before & After 4" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Instituto Tecnológico</h4>
+                            <p>Dotación completa para personal</p>
+                            <button class="btn btn-light btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#galleryModal4">Ver Detalle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="gallery-item">
+                        <img src="https://th.bing.com/th/id/R.81a17a7fa5d4fd1a73b1f91271592cff?rik=kdj9fxmlsUon1w&pid=ImgRaw&r=0" alt="Video Testimonios" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Testimonios de Clientes</h4>
+                            <p>Video con experiencias reales</p>
+                            <button class="btn btn-light btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#videoModalTestimonios">Ver Video</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials & Clients Section -->
+    <section id="clients" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Testimonios y Clientes</h2>
+            
+            <!-- Testimonials Slider -->
+            <div class="testimonials-slider mb-5" data-aos="fade-up" data-aos-delay="200">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="client-quote">"Tropic Summer gran empresa"</p>
+                            <div class="client-info">
+                                <h5 class="client-name">María Rodríguez</h5>
+                                <p class="client-position">clienta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="client-quote">"La puntualidad en las entregas y la calidad de los materiales nos han hecho clientes fieles por más de 5 años. Su servicio es excepcional."</p>
+                            <div class="client-info">
+                                <h5 class="client-name">Olegario</h5>
+                                <p class="client-position">profesor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="client-quote">"muy bonitos"</p>
+                            <div class="client-info">
+                                <h5 class="client-name">Laura Gómez</h5>
+                                <p class="client-position">cliente frecuente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Clients Slider -->
+            <div class="clients-slider" data-aos="fade-up" data-aos-delay="400">
+                <h4 class="text-center mb-4">Instituciones que confían en nosotros</h4>
+                <div class="row">
+                    <div class="col-4 col-md-2">
+                        <div class="client-logo">
+                            <img src="https://th.bing.com/th/id/OIP.6uDHNBTnlKIEMSiVS_zj0QAAAA?rs=1&pid=ImgDetMain" alt="Client Logo 1">
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="client-logo">
+                            <img src="https://th.bing.com/th/id/R.8e7134b8bbed6a0725b6d5374d27cb9d?rik=Qg0Vwgesyq5sgA&pid=ImgRaw&r=0" alt="Client Logo 2">
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="client-logo">
+                            <img src="https://uniform.wingzero.tw/assets/images/badge/co-7-antioch-medellin.Array" alt="Client Logo 3">
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="client-logo">
+                            <img src="https://th.bing.com/th/id/OIP.rXoPt3BsZr4lJw8WvAzh7wAAAA?rs=1&pid=ImgDetMain" alt="Client Logo 4">
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="client-logo">
+                            <img src="https://th.bing.com/th/id/OIP.nWa1DI7Q63KTSNaLUpKguwHaHa?rs=1&pid=ImgDetMain" alt="Client Logo 5">
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="client-logo">
+                            <img src="https://th.bing.com/th/id/OIP.E-V34F6HSRc7A6wP67FMsAHaG6?rs=1&pid=ImgDetMain" alt="Client Logo 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Información de Contacto</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Ubicación</h5>
+                                <p>Calle Principal #123, Ciudad, País</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h5>Teléfono</h5>
+                                <p>+57 123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@tropicsummer.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h5>Horario de Atención</h5>
+                                <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+                                <p>Sábado: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="social-media mt-4">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Envíanos un Mensaje</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="tu@correo.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Tu número de teléfono">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Asunto del mensaje">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container-fluid p-0">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.56808397427315!2d-74.10603686295215!3d4.577974271686899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99ae6eb1844f%3A0xebb71bcc4c9e8cce!2sConfecciones%20Tropic%20Summer!5e0!3m2!1ses-419!2sco!4v1741494843106!5m2!1ses-419!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/200x80?text=Tropic+Summer" alt="Tropic Summer Logo">
+                    </div>
+                    <p class="footer-about">Tropic Summer es una empresa líder en la confección de uniformes escolares y dotaciones institucionales, comprometida con la calidad, la innovación y la sostenibilidad.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#gallery">Galería</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-title">Boletín Informativo</h5>
+                    <p>Suscríbete para recibir noticias y promociones especiales.</p>
+                    <form class="footer-newsletter">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Tu correo electrónico" aria-label="Email" aria-describedby="button-addon2">
+                            <button class="btn btn-primary-custom" type="button" id="button-addon2">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Tropic Summer. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Product 360 Modal -->
+    <div class="modal fade" id="product360Modal" tabindex="-1" aria-labelledby="product360ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="product360ModalLabel">Vista 360° del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="https://via.placeholder.com/800x500?text=Vista+360+del+Producto" alt="Producto 360" class="img-fluid">
+                    <!-- Aquí se podría integrar un visor 360° real -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sizes Modal -->
+    <div class="modal fade" id="sizesModal" tabindex="-1" aria-labelledby="sizesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sizesModalLabel">Tabla de Tallas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Talla</th>
+                                    <th>Edad</th>
+                                    <th>Estatura (cm)</th>
+                                    <th>Pecho (cm)</th>
+                                    <th>Cintura (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2 años</td>
+                                    <td>85-90</td>
+                                    <td>53-55</td>
+                                    <td>51-53</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>4 años</td>
+                                    <td>95-105</td>
+                                    <td>56-58</td>
+                                    <td>54-56</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>6 años</td>
+                                    <td>110-120</td>
+                                    <td>61-63</td>
+                                    <td>57-59</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>8 años</td>
+                                    <td>125-130</td>
+                                    <td>66-68</td>
+                                    <td>60-62</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>10 años</td>
+                                    <td>135-140</td>
+                                    <td>71-73</td>
+                                    <td>63-65</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>12 años</td>
+                                    <td>145-150</td>
+                                    <td>76-78</td>
+                                    <td>66-68</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>14 años</td>
+                                    <td>155-165</td>
+                                    <td>81-83</td>
+                                    <td>69-71</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>16 años</td>
+                                    <td>170-175</td>
+                                    <td>86-88</td>
+                                    <td>72-74</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Modal -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quoteModalLabel">Solicitar Cotización</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="quoteForm">
+                        <div class="mb-3">
+                            <label for="institutionName" class="form-label">Nombre de la Institución</label>
+                            <input type="text" class="form-control" id="institutionName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactPerson" class="form-label">Persona de Contacto</label>
+                            <input type="text" class="form-control" id="contactPerson" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactPhone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="contactPhone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productInterest" class="form-label">Producto de Interés</label>
+                            <select class="form-select" id="productInterest" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="uniforme-diario">Uniformes Diarios</option>
+                                <option value="uniforme-deportivo">Uniformes Deportivos</option>
+                                <option value="accesorios">Accesorios</option>
+                                <option value="dotacion-completa">Dotación Completa</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Cantidad Aproximada</label>
+                            <input type="number" class="form-control" id="quantity" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="additionalInfo" class="form-label">Información Adicional</label>
+                            <textarea class="form-control" id="additionalInfo" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modals -->
+    <div class="modal fade" id="galleryModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Colegio San Agustín - Renovación de Uniformes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/500x350?text=Antes" alt="Antes" class="img-fluid mb-3">
+                            <h6 class="text-center">Antes</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/500x350?text=Después" alt="Después" class="img-fluid mb-3">
+                            <h6 class="text-center">Después</h6>
+                        </div>
+                    </div>
+                    <div class="project-description mt-4">
+                        <h5>Descripción del Proyecto</h5>
+                        <p>Renovación completa de la imagen institucional del Colegio San Agustín mediante el rediseño de sus uniformes. Se implementaron nuevos materiales, diseños modernos manteniendo la esencia tradicional y se agregaron elementos distintivos que refuerzan la identidad del colegio.</p>
+                        <p>El proyecto incluyó más de 1,500 uniformes y fue completado en un tiempo récord de 2 meses para estar listo para el inicio del año escolar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Proceso de Confección</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
